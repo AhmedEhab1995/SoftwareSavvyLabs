@@ -1,14 +1,21 @@
+"use client";
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Award, Users, Building2, Target, Lightbulb, Shield } from "lucide-react"
 import Link from "next/link"
 import { ClientsSection } from "@/components/clients-section"
+import { useLanguage } from '@/lib/i18n';
+import { translations } from '@/lib/translations';
 
 export default function Home() {
+const { direction, language } = useLanguage(); 
+const homeItems = translations[language]?.home;
+
   const stats = [
-    { label: "Successful Transactions", value: "10,000+", icon: Building2 },
-    { label: "Happy Clients", value: "500+", icon: Users },
-    { label: "Partner Companies", value: "50+", icon: Target },
+    { label: homeItems.stats.transactions, value: "10,000+", icon: Building2 },
+    { label: homeItems.stats.clients, value: "500+", icon: Users },
+    { label: homeItems.stats.partners, value: "50+", icon: Target },
   ]
 
   const values = [
@@ -35,19 +42,18 @@ export default function Home() {
       <section className="relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Transforming Ideas into
-            <span className="text-primary"> Digital Reality</span>
+          {homeItems.hero.title}
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            We are a leading software development company specializing in digital transformation,
-            fintech solutions, and innovative technology services.
+          {homeItems.hero.subtitle}
+
           </p>
           <div className="flex justify-center gap-4">
             <Button asChild size="lg">
-              <Link href="/contact">Get Started</Link>
+              <Link href="/contact">{homeItems.buttons.getStarted}</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/services">Our Services</Link>
+              <Link href="/services">{homeItems.buttons.ourServices}</Link>
             </Button>
           </div>
         </div>

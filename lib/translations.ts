@@ -18,6 +18,11 @@ export const translations = {
         clients: 'Happy Clients',
         partners: 'Partner Companies',
       },
+      buttons: {
+        getStarted: 'Get Started',
+        ourServices: 'Our Services',
+
+      },
     },
     // Add more translations as needed
   },
@@ -39,6 +44,11 @@ export const translations = {
         transactions: 'المعاملات الناجحة',
         clients: 'العملاء السعداء',
         partners: 'الشركات الشريكة',
+      },
+      buttons: {
+        getStarted: 'البدء',
+        ourServices: 'خدماتنا',
+
       },
     },
     // Add more translations as needed
