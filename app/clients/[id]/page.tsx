@@ -7,8 +7,7 @@ import { Badge } from "@/components/ui/badge";
 
 // Mock clients data (ideally move to a shared file)
 // app/clients/clients-data.ts
-
-export const clients = [
+const clients = [
   {
     id: "keystone-financial",
     name: "KeyStone Financial Solutions",
@@ -75,11 +74,11 @@ export const clients = [
 
 export function generateStaticParams() {
   return clients.map((client) => ({
-    id: [client.id],
+    id: client.id,
   }));
 }
-export default function ClientPage({ params }: { params: { id?: string[] } }) {
-  const clientId = params.id?.[0];
+export default function ClientPage({ params }: { params: { id?: string } }) {
+  const clientId = params.id;
 
   const client = clients.find((c) => c.id === clientId);
 
