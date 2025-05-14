@@ -1,23 +1,29 @@
 "use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Award, Users, Building2, Target, Lightbulb, Shield } from "lucide-react"
-import Link from "next/link"
-import { ClientsSection } from "@/components/clients-section"
-import { useLanguage } from '@/lib/i18n';
-import { translations } from '@/lib/translations';
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Award,
+  Users,
+  Building2,
+  Target,
+  Lightbulb,
+  Shield,
+} from "lucide-react";
+import Link from "next/link";
+import { ClientsSection } from "@/components/clients-section";
+import { useLanguage } from "@/lib/i18n";
+import { translations } from "@/lib/translations";
 
 export default function Home() {
-const { direction, language } = useLanguage(); 
-const homeItems = translations[language]?.home;
+  const { direction, language } = useLanguage();
+  const homeItems = translations[language]?.home;
 
   const stats = [
     { label: homeItems.stats.transactions, value: "10,000+", icon: Building2 },
-    { label: homeItems.stats.clients, value: "500+", icon: Users },
-    { label: homeItems.stats.partners, value: "50+", icon: Target },
-  ]
-
+    { label: homeItems.stats.clients, value: "50+", icon: Users },
+    { label: homeItems.stats.partners, value: "10+", icon: Target },
+  ];
   const values = [
     {
       icon: Lightbulb,
@@ -34,19 +40,17 @@ const homeItems = translations[language]?.home;
       title: "Excellence",
       description: "Delivering quality in every project",
     },
-  ]
-
+  ];
   return (
     <div className="flex flex-col gap-16 py-8">
       {/* Hero Section */}
       <section className="relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          {homeItems.hero.title}
+            {homeItems.hero.title}
           </h1>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          {homeItems.hero.subtitle}
-
+            {homeItems.hero.subtitle}
           </p>
           <div className="flex justify-center gap-4">
             <Button asChild size="lg">
@@ -80,7 +84,9 @@ const homeItems = translations[language]?.home;
 
       {/* Values Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Our Core Values</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">
+          Our Core Values
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {values.map((value, index) => (
             <Card key={index}>
@@ -104,20 +110,21 @@ const homeItems = translations[language]?.home;
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
               <p className="text-muted-foreground">
-                To empower businesses through innovative digital solutions, driving growth
-                and transformation in an ever-evolving technological landscape.
+                To empower businesses through innovative digital solutions,
+                driving growth and transformation in an ever-evolving
+                technological landscape.
               </p>
             </div>
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Vision</h2>
               <p className="text-muted-foreground">
-                To be the global leader in digital innovation, setting new standards
-                in software development and technological advancement.
+                To be the global leader in digital innovation, setting new
+                standards in software development and technological advancement.
               </p>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }

@@ -1,17 +1,21 @@
-import { notFound } from "next/navigation"
-import Image from "next/image"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import Image from "next/image";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const team = [
   {
     id: "sarah-johnson",
     name: "Sarah Johnson",
     role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&h=300",
+    image:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&h=300",
     bio: "15+ years of experience in digital transformation",
     education: ["MBA from Harvard Business School", "BS in Computer Science"],
-    expertise: ["Digital Transformation", "Strategic Planning", "Team Leadership"],
+    expertise: [
+      "Digital Transformation",
+      "Strategic Planning",
+      "Team Leadership",
+    ],
     achievements: [
       "Led 100+ successful digital transformation projects",
       "Featured in Forbes 30 Under 30",
@@ -22,7 +26,8 @@ const team = [
     id: "michael-chen",
     name: "Michael Chen",
     role: "CTO",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300",
+    image:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300",
     bio: "Expert in cloud architecture and AI solutions",
     education: ["PhD in Computer Science", "MS in Artificial Intelligence"],
     expertise: ["Cloud Architecture", "AI/ML", "System Design"],
@@ -32,20 +37,51 @@ const team = [
       "Led development of cloud-native platform",
     ],
   },
-]
+];
 
-// This function is required for static site generation
+// Only needed if using `output: export`
 export function generateStaticParams() {
   return team.map((person) => ({
     id: person.id,
-  }))
+  }));
 }
 
 export default function PersonPage({ params }: { params: { id: string } }) {
-  const person = team.find((p) => p.id === params.id)
+  const person = team.find((p) => p.id === params.id);
 
   if (!person) {
-    notFound()
+    return (
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          fontFamily: "sans-serif",
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <h1
+            style={{
+              fontSize: "2rem",
+              fontWeight: "bold",
+              marginRight: "1rem",
+            }}
+          >
+            404
+          </h1>
+          <div
+            style={{
+              height: "2rem",
+              width: "1px",
+              backgroundColor: "#ccc",
+              marginRight: "1rem",
+            }}
+          />
+          <p style={{ fontSize: "1rem" }}>This page could not be found.</p>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -104,5 +140,5 @@ export default function PersonPage({ params }: { params: { id: string } }) {
         </Card>
       </div>
     </div>
-  )
+  );
 }

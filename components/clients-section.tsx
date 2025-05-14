@@ -1,28 +1,37 @@
-import Image from 'next/image'
-import { Card, CardContent } from "@/components/ui/card"
+import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 const clients = [
   {
-    name: "TechCorp Global",
-    logo: "https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=200&h=100&fit=crop",
-    description: "Leading technology corporation",
-  },
-  {
-    name: "FinanceHub",
-    logo: "https://images.unsplash.com/photo-1598815272841-d7fdbc5d59a7?w=200&h=100&fit=crop",
+    id: "keystone-financial",
+    name: "KeyStone Financial Solutions",
+    logo: "/images/keystone.png",
     description: "Financial services provider",
+    link: "https:www.Example.com",
   },
   {
-    name: "SmartSolutions",
-    logo: "https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=200&h=100&fit=crop",
-    description: "Smart city solutions",
+    id: "swvl",
+    name: "SWVL",
+    logo: "/images/SWVL.png",
+    description: "Smart Transportation Solutions",
+    link: "https://www.swvl.com/",
   },
   {
-    name: "DataDrive",
-    logo: "https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?w=200&h=100&fit=crop",
+    id: "zenith-travel-agency",
+    name: "Zenith Travel Agency",
+    logo: "/images/TravelGo-removebg-preview.png",
+    description: "Leading Travel Agency",
+    link: "https:www.Example.com",
+  },
+  {
+    id: "damen-e-payment",
+    name: "Damen E-payment",
+    logo: "/images/Damen.png",
     description: "Data analytics company",
+    link: "https://damen.com.eg/",
   },
-]
+];
 
 export function ClientsSection() {
   return (
@@ -34,20 +43,29 @@ export function ClientsSection() {
             Partnering with industry leaders to deliver exceptional solutions
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {clients.map((client) => (
-            <Card key={client.name} className="hover:shadow-lg transition-shadow">
+            <Card
+              key={client.name}
+              className="hover:shadow-lg transition-shadow"
+            >
               <CardContent className="p-6">
-                <div className="relative h-[100px] mb-4">
-                  <Image
-                    src={client.logo}
-                    alt={client.name}
-                    fill
-                    className="object-contain"
-                  />
-                </div>
-                <h3 className="font-semibold text-center mb-2">{client.name}</h3>
+                <Link href={`/clients/${client.id}`}>
+                  {/* <a href={client.link} target="_blank" rel="noopener noreferrer"> */}
+                  <div className="relative h-[100px] mb-4">
+                    <Image
+                      src={client.logo}
+                      alt={client.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  {/* </a> */}
+                </Link>
+                <h3 className="font-semibold text-center mb-2">
+                  {client.name}
+                </h3>
                 <p className="text-sm text-muted-foreground text-center">
                   {client.description}
                 </p>
@@ -57,5 +75,5 @@ export function ClientsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
