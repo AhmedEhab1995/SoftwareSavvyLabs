@@ -1,48 +1,52 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import Link from "next/link";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const team = [
   {
-    id: "sarah-johnson",
-    name: "Sarah Johnson",
-    role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=300&h=300",
-    bio: "15+ years of experience in digital transformation",
+    id: "ahmed-ehab",
+    name: "Ahmed Ehab",
+    role: "Chief Executive Officer (CEO)",
+    image: "/images/ahmed-ehab.png",
+    bio: "Software engineer with deep expertise in machine learning and AI",
   },
   {
-    id: "michael-chen",
-    name: "Michael Chen",
-    role: "CTO",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&h=300",
-    bio: "Expert in cloud computing and architecture and AI solutions",
+    id: "osama-bahaa",
+    name: "Osama Bahaa",
+    role: "Chief Technology Officer (CTO)",
+    image: "/images/osama-bahaa.png",
+    bio: "Tech visionary specializing in system architecture and cybersecurity",
   },
   {
-    name: "Emily Rodriguez",
-    role: "Head of Design",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=300&h=300",
-    bio: "Passionate about creating intuitive user experiences",
-  },
-  {
-    name: "David Kim",
-    role: "Lead Developer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&h=300",
-    bio: "Full-stack developer with 10+ years experience",
-  },
-  {
-    name: "Lisa Patel",
+    id: "ayman-helal",
+    name: "Ayman Helal",
     role: "Product Manager",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=300&h=300",
-    bio: "Specializes in agile methodologies and product strategy",
+    image: "/images/Ayman-helal.png",
+    bio: "Dubai-based product strategist with a user-first mindset",
   },
   {
-    name: "James Wilson",
-    role: "Security Expert",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&h=300",
-    bio: "Cybersecurity specialist with multiple certifications",
+    id: "abdelrahman-younis",
+    name: "Abdelrahman Younis",
+    role: "Chief Financial Officer (CFO)",
+    image: "/images/abdo.png",
+    bio: "Finance lead with a sharp eye on growth and risk optimization",
   },
-]
+  {
+    id: "omar-fawzy",
+    name: "Omar Fawzy",
+    role: "Head of Design",
+    image: "/images/omar-fawzy.png",
+    bio: "Creative lead transforming ideas into seamless digital interfaces",
+  },
+  {
+    id: "sameh-farouk",
+    name: "Sameh Farouk",
+    role: "Lead Developer",
+    image: "/images/sameh-farouk.png",
+    bio: "Full-stack developer focused on scalable, high-performance systems",
+  },
+];
 
 export default function PeoplePage() {
   return (
@@ -83,5 +87,5 @@ export default function PeoplePage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

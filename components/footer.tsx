@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="border-t">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <Code2 className="h-8 w-8" />
@@ -58,41 +58,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>contact@savvylabs.com</li>
+              <li>info@softwaresavvylabs.com</li>
               <li>+201282335415</li>
-              <li>capital business park, Building 2 </li>
-              <li>Cairo, Egypt</li>
+              <li>Flat 22, Building 254, beverly hills sodic </li>
+              <li>Giza, Egypt</li>
             </ul>
-          </div>
-
-          <div>
-            <h3 className="font-semibold mb-4">Follow Us</h3>
-            <div className="flex space-x-4">
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <Facebook className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <Instagram className="h-5 w-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-primary"
-              >
-                <Linkedin className="h-5 w-5" />
-              </Link>
-            </div>
           </div>
         </div>
 

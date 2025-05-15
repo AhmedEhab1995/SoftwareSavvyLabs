@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X, Code2 } from 'lucide-react';
-import { Button } from './ui/button';
-import { ModeToggle } from './mode-toggle';
-import { LanguageToggle } from './language-toggle';
-import { useLanguage } from '@/lib/i18n';
-import { translations } from '@/lib/translations'; // Import translations
+import { useState } from "react";
+import Link from "next/link";
+import { Menu, X, Code2 } from "lucide-react";
+import { Button } from "./ui/button";
+import { ModeToggle } from "./mode-toggle";
+import { LanguageToggle } from "./language-toggle";
+import { useLanguage } from "@/lib/i18n";
+import { translations } from "@/lib/translations"; // Import translations
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [active, setActive] = useState<string>(''); // Track active link
+  const [active, setActive] = useState<string>(""); // Track active link
   const { direction, language } = useLanguage(); // Get current language and direction
 
   const navItems = translations[language]?.nav;
@@ -33,14 +33,16 @@ const Navbar = () => {
                 <Link
                   key={key}
                   href={`/${key.toLowerCase()}`}
-                  className={`hover:text-primary transition-colors px-3 py-2 rounded-md ${active === key ? 'bg-blue-600 text-white' : 'text-gray-500'}`}
+                  className={`hover:text-primary transition-colors px-3 py-2 rounded-md ${
+                    active === key ? "bg-blue-600 text-white" : "text-gray-500"
+                  }`}
                   onClick={() => setActive(key)} // Set active on click
                 >
                   {navItems[key as keyof typeof navItems]}
                 </Link>
               ))}
               <ModeToggle />
-              <LanguageToggle />
+              {/* <LanguageToggle /> */}
             </div>
           </div>
 
@@ -50,7 +52,11 @@ const Navbar = () => {
               size="icon"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </Button>
           </div>
         </div>
@@ -63,7 +69,9 @@ const Navbar = () => {
               <Link
                 key={key}
                 href={`/${key.toLowerCase()}`}
-                className={`block px-3 py-2 rounded-md text-gray-700 hover:text-primary transition-colors ${active === key ? 'bg-blue-600 text-white' : ''}`}
+                className={`block px-3 py-2 rounded-md text-gray-700 hover:text-primary transition-colors ${
+                  active === key ? "bg-blue-600 text-white" : ""
+                }`}
                 onClick={() => {
                   setActive(key);
                   setIsOpen(false);
@@ -74,7 +82,7 @@ const Navbar = () => {
             ))}
             <div className="px-3 py-2 flex space-x-2">
               <ModeToggle />
-              <LanguageToggle />
+              {/* <LanguageToggle /> */}
             </div>
           </div>
         </div>

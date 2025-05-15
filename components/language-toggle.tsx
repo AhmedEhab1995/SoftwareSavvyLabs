@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { useLanguage } from "@/lib/i18n"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/i18n";
+import Image from "next/image";
 
 export function LanguageToggle() {
-  const { language, setLanguage } = useLanguage()
+  const { language, setLanguage } = useLanguage();
 
   return (
     <Button
@@ -32,5 +32,5 @@ export function LanguageToggle() {
         />
       )}
     </Button>
-  )
+  );
 }

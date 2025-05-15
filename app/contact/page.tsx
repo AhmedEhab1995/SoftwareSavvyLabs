@@ -46,7 +46,9 @@ export default function ContactPage() {
               <Mail className="h-6 w-6 text-primary" />
               <div>
                 <h3 className="font-semibold">Email</h3>
-                <p className="text-muted-foreground">contact@savvylabs.com</p>
+                <p className="text-muted-foreground">
+                  info@softwaresavvylabs.com
+                </p>
               </div>
             </div>
             <div className="flex items-center space-x-4 mb-4">
@@ -61,9 +63,9 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-semibold">Address</h3>
                 <p className="text-muted-foreground">
-                  capital business park, Building 2
+                  Flat 22, Building 254, beverly hills sodic 
                   <br />
-                  Cairo, Egypt
+                  Giza, Egypt
                 </p>
               </div>
             </div>
