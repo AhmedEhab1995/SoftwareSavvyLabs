@@ -21,7 +21,7 @@ const clients = [
         "Internal System: Robust platform for operations, data, and reporting.",
       ],
     },
-    link: "https:www.Example.com",
+    link: "https://keystonediligence.com/",
   },
   {
     id: "swvl",
@@ -52,7 +52,7 @@ const clients = [
         "Ongoing Support: Upgrades and troubleshooting.",
       ],
     },
-    link: "https:www.Example.com",
+    link: "https://zenithstravel.com/",
   },
   {
     id: "damen-e-payment",

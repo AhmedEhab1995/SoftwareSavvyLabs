@@ -8,7 +8,7 @@ const clients = [
     name: "KeyStone Financial Solutions",
     logo: "/images/keystone.png",
     description: "Financial services provider",
-    link: "https:www.Example.com",
+    link: "https://keystonediligence.com/",
   },
   {
     id: "swvl",
@@ -22,7 +22,7 @@ const clients = [
     name: "Zenith Travel Agency",
     logo: "/images/TravelGo-removebg-preview.png",
     description: "Leading Travel Agency",
-    link: "https:www.Example.com",
+    link: "https://zenithstravel.com/",
   },
   {
     id: "damen-e-payment",
