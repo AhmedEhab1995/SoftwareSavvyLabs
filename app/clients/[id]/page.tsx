@@ -15,7 +15,7 @@ const clients = [
     description: "Financial services provider",
     details: {
       overview:
-        "Developing a full software solution for a top due diligence firm in Algeria.",
+        "Developing a full software solution for a top due diligence firm in Egypt.",
       contributions: [
         "Website Development: User-friendly, informative online presence.",
         "Internal System: Robust platform for operations, data, and reporting.",
