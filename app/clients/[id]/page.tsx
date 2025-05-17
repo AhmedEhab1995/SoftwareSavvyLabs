@@ -150,7 +150,7 @@ export default function ClientPage({ params }: { params: { id?: string } }) {
             <CardContent className="space-y-6">
               {/* ... existing content ... */}
 
-              <div className="pt-4 text-center">
+              <div className="pt-4">
                 <a
                   href={
                     client.link.startsWith("http")
@@ -159,7 +159,7 @@ export default function ClientPage({ params }: { params: { id?: string } }) {
                   }
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+                  className="block w-full px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition text-center"
                 >
                   Visit Website
                 </a>

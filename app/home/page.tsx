@@ -24,6 +24,7 @@ export default function Home() {
     { label: homeItems.stats.clients, value: "50+", icon: Users },
     { label: homeItems.stats.partners, value: "10+", icon: Target },
   ];
+
   const values = [
     {
       icon: Lightbulb,
@@ -41,15 +42,28 @@ export default function Home() {
       description: "Delivering quality in every project",
     },
   ];
+
   return (
-    <div className="flex flex-col gap-16 pt-24">
+    <div className="flex flex-col gap-16">
       {/* Hero Section */}
-      <section className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+      <section className="py-20 relative bg-cover bg-center bg-no-repeat">
+        {/* Background image layer */}
+        <div
+          className="absolute inset-0 bg-[url('/images/SSL2.png')] bg-cover bg-center bg-no-repeat"
+          aria-hidden="true"
+        ></div>
+        <div
+          className="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/60"
+          aria-hidden="true"
+        ></div>
+
+        {/* Content layer */}
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
             {homeItems.hero.title}
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+
+          <p className="text-xl text-gray-500 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             {homeItems.hero.subtitle}
           </p>
           <div className="flex justify-center gap-4">
@@ -64,13 +78,21 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-muted/50 py-16">
+      <section className="bg-gradient-to-r from-muted/50 to-muted/30 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {stats.map((stat, index) => (
               <Card key={index}>
                 <CardContent className="flex items-center gap-4 p-6">
-                  <stat.icon className="h-12 w-12 text-primary" />
+                  <stat.icon
+                    className={`h-12 w-12 ${
+                      index % 3 === 0
+                        ? "text-primary"
+                        : index % 3 === 1
+                        ? "text-secondary"
+                        : "text-accent"
+                    }`}
+                  />
                   <div>
                     <p className="text-3xl font-bold">{stat.value}</p>
                     <p className="text-muted-foreground">{stat.label}</p>
@@ -81,6 +103,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* Clients Section */}
+
+      <ClientsSection />
 
       {/* Values Section */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -91,7 +116,15 @@ export default function Home() {
           {values.map((value, index) => (
             <Card key={index}>
               <CardContent className="p-6 text-center">
-                <value.icon className="h-12 w-12 mx-auto mb-4 text-primary" />
+                <value.icon
+                  className={`h-12 w-12 mx-auto mb-4 ${
+                    index % 3 === 0
+                      ? "text-primary"
+                      : index % 3 === 1
+                      ? "text-secondary"
+                      : "text-accent"
+                  }`}
+                />
                 <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
                 <p className="text-muted-foreground">{value.description}</p>
               </CardContent>
@@ -99,12 +132,8 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* Clients Section */}
-      <ClientsSection />
-
       {/* Mission & Vision */}
-      <section className="bg-muted/50 py-16">
+      <section className="bg-gradient-to-b from-muted/60 to-background py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>

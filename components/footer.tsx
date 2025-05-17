@@ -58,7 +58,14 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>info@softwaresavvylabs.com</li>
+              <li>
+                <a
+                  href="mailto:info@softwaresavvylabs.com"
+                  className="hover:underline"
+                >
+                  info@softwaresavvylabs.com
+                </a>
+              </li>{" "}
               <li>+201282335415</li>
               <li>Flat 22, Building 254, beverly hills sodic </li>
               <li>Giza, Egypt</li>

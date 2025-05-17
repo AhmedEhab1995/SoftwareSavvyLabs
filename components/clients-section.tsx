@@ -46,12 +46,12 @@ export function ClientsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {clients.map((client) => (
-            <Card
-              key={client.name}
-              className="hover:shadow-lg transition-shadow"
-            >
-              <CardContent className="p-6">
-                <Link href={`/clients/${client.id}`}>
+            <Link href={`/clients/${client.id}`}>
+              <Card
+                key={client.name}
+                className="hover:shadow-lg transition-shadow"
+              >
+                <CardContent className="p-6">
                   {/* <a href={client.link} target="_blank" rel="noopener noreferrer"> */}
                   <div className="relative h-[100px] mb-4">
                     <Image
@@ -62,15 +62,15 @@ export function ClientsSection() {
                     />
                   </div>
                   {/* </a> */}
-                </Link>
-                <h3 className="font-semibold text-center mb-2">
-                  {client.name}
-                </h3>
-                <p className="text-sm text-muted-foreground text-center">
-                  {client.description}
-                </p>
-              </CardContent>
-            </Card>
+                  <h3 className="font-semibold text-center mb-2">
+                    {client.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground text-center">
+                    {client.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
