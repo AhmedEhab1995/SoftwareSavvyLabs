@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Code2 } from "lucide-react";
 import { Button } from "./ui/button";
@@ -15,9 +15,25 @@ const Navbar = () => {
   const { direction, language } = useLanguage(); // Get current language and direction
 
   const navItems = translations[language]?.nav;
+  const [scrolled, setScrolled] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10); // true if page is scrolled down
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <nav className="border-b" dir={direction}>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 border-b transition-all duration-300 ${
+        scrolled
+          ? "bg-white/70 dark:bg-black/50 backdrop-blur-md shadow-md"
+          : "bg-background"
+      }`}
+      dir={direction}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -33,8 +49,8 @@ const Navbar = () => {
                 <Link
                   key={key}
                   href={`/${key.toLowerCase()}`}
-                  className={`hover:text-primary transition-colors px-3 py-2 rounded-md ${
-                    active === key ? "bg-blue-600 text-white" : "text-gray-500"
+                  className={`hover:text-black transition-colors px-3 py-2 rounded-md ${
+                    active === key ? "bg-primary text-primary-foreground" : ""
                   }`}
                   onClick={() => setActive(key)} // Set active on click
                 >
@@ -70,7 +86,9 @@ const Navbar = () => {
                 key={key}
                 href={`/${key.toLowerCase()}`}
                 className={`block px-3 py-2 rounded-md text-gray-700 hover:text-primary transition-colors ${
-                  active === key ? "bg-blue-600 text-white" : ""
+                  active === key
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground"
                 }`}
                 onClick={() => {
                   setActive(key);

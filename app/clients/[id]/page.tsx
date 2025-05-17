@@ -117,7 +117,7 @@ export default function ClientPage({ params }: { params: { id?: string } }) {
     );
   }
   return (
-    <div className="py-12">
+    <div className="flex flex-col gap-16 pt-24">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <Card>
           <CardHeader className="text-center">

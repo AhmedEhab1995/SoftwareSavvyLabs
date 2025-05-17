@@ -1,11 +1,18 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { BadgeDollarSign, Building, Factory, Laptop } from "lucide-react"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { BadgeDollarSign, Building, Factory, Laptop } from "lucide-react";
 
 const services = [
   {
     icon: Laptop,
     title: "Digital Services Operator",
-    description: "Comprehensive digital transformation solutions including web and mobile development, cloud services, and digital strategy consulting.",
+    description:
+      "Comprehensive digital transformation solutions including web and mobile development, cloud services, and digital strategy consulting.",
     features: [
       "Custom Software Development",
       "Cloud Solutions",
@@ -16,7 +23,8 @@ const services = [
   {
     icon: BadgeDollarSign,
     title: "Fintech and Payment Services",
-    description: "Innovative financial technology solutions for modern payment processing and financial management systems.",
+    description:
+      "Innovative financial technology solutions for modern payment processing and financial management systems.",
     features: [
       "Payment Gateway Integration",
       "E-wallet Solutions",
@@ -27,7 +35,8 @@ const services = [
   {
     icon: Building,
     title: "Outsourcing Services Provider",
-    description: "Professional IT staffing and project outsourcing services to help businesses scale efficiently.",
+    description:
+      "Professional IT staffing and project outsourcing services to help businesses scale efficiently.",
     features: [
       "Dedicated Development Teams",
       "IT Staff Augmentation",
@@ -38,7 +47,8 @@ const services = [
   {
     icon: Factory,
     title: "Smart Digital Factory",
-    description: "Advanced manufacturing solutions leveraging IoT, AI, and automation technologies.",
+    description:
+      "Advanced manufacturing solutions leveraging IoT, AI, and automation technologies.",
     features: [
       "IoT Implementation",
       "Industrial Automation",
@@ -46,11 +56,11 @@ const services = [
       "Predictive Maintenance",
     ],
   },
-]
+];
 
 export default function ServicesPage() {
   return (
-    <div className="py-12">
+    <div className="flex flex-col gap-16 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">Our Services</h1>
@@ -85,5 +95,5 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

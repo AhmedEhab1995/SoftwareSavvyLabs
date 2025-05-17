@@ -1,18 +1,18 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import { 
-  Smartphone, 
-  Globe, 
-  ShieldCheck, 
+import { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import {
+  Smartphone,
+  Globe,
+  ShieldCheck,
   Brain,
   BarChart,
-  Cloud
-} from "lucide-react"
+  Cloud,
+} from "lucide-react";
 
 const products = [
   {
@@ -57,28 +57,28 @@ const products = [
     features: ["Deployment", "Scaling", "Monitoring", "Security"],
     category: "Infrastructure",
   },
-]
+];
 
 export default function ProductsPage() {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextProduct = () => {
-    setCurrentIndex((prev) => (prev + 1) % products.length)
-  }
+    setCurrentIndex((prev) => (prev + 1) % products.length);
+  };
 
   const prevProduct = () => {
-    setCurrentIndex((prev) => (prev - 1 + products.length) % products.length)
-  }
+    setCurrentIndex((prev) => (prev - 1 + products.length) % products.length);
+  };
 
   useEffect(() => {
-    const interval = setInterval(nextProduct, 10000)
-    return () => clearInterval(interval)
-  }, [])
+    const interval = setInterval(nextProduct, 10000);
+    return () => clearInterval(interval);
+  }, []);
 
-  const currentProduct = products[currentIndex]
+  const currentProduct = products[currentIndex];
 
   return (
-    <div className="py-12">
+    <div className="flex flex-col gap-16 pt-24">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">Our Products</h1>
@@ -108,7 +108,9 @@ export default function ProductsPage() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-4">{currentProduct.description}</p>
+              <p className="text-muted-foreground mb-4">
+                {currentProduct.description}
+              </p>
               <ul className="space-y-2">
                 {currentProduct.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center">
@@ -143,5 +145,5 @@ export default function ProductsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

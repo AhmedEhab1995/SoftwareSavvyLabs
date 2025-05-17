@@ -50,7 +50,7 @@ const team = [
 
 export default function PeoplePage() {
   return (
-    <div className="py-12">
+    <div className="flex flex-col gap-16 pt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-4xl font-bold mb-4">Our Team</h1>
