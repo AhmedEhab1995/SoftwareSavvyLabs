@@ -38,8 +38,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <Code2 className="h-8 w-8" />
-              <span className="font-bold text-xl">SAVVY Labs</span>
+              <img
+                src="/images/SSL4.png"
+                alt="SAVVY Labs Logo"
+                className="h-12 w-auto"
+              />
             </Link>
           </div>
 
