@@ -8,6 +8,8 @@ import { ModeToggle } from "./mode-toggle";
 import { LanguageToggle } from "./language-toggle";
 import { useLanguage } from "@/lib/i18n";
 import { translations } from "@/lib/translations"; // Import translations
+import { useTheme } from "next-themes";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +27,9 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const { theme } = useTheme();
+
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 border-b transition-all duration-300 ${
@@ -39,9 +44,9 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <img
-                src="/images/SSL4.png"
+                src={theme === "dark" ? "/images/SSL4.png" : "/images/SSL5.png"}
                 alt="SAVVY Labs Logo"
-                className="h-12 w-auto"
+                className={theme === "dark" ? "h-14 w-auto" : "h-12 w-auto"}
               />
             </Link>
           </div>
