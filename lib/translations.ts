@@ -14,8 +14,8 @@ export const translations = {
         subtitle: 'Leading software development company specializing in digital transformation',
       },
       stats: {
-        transactions: 'Successful Transactions',
-        clients: 'Happy Clients',
+        transactions: 'Industries Served',
+        clients: 'Tech Stack Specialists',
         partners: 'Partner Companies',
       },
       buttons: {

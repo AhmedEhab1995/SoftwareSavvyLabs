@@ -14,14 +14,15 @@ import Link from "next/link";
 import { ClientsSection } from "@/components/clients-section";
 import { useLanguage } from "@/lib/i18n";
 import { translations } from "@/lib/translations";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const { direction, language } = useLanguage();
   const homeItems = translations[language]?.home;
 
   const stats = [
-    { label: homeItems.stats.transactions, value: "10,000+", icon: Building2 },
-    { label: homeItems.stats.clients, value: "50+", icon: Users },
+    { label: homeItems.stats.transactions, value: "10+", icon: Building2 },
+    { label: homeItems.stats.clients, value: "17+", icon: Users },
     { label: homeItems.stats.partners, value: "10+", icon: Target },
   ];
 
@@ -71,21 +72,36 @@ export default function Home() {
 
         {/* Content layer */}
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+          <motion.h1
+            className="text-4xl md:text-6xl font-bold mb-6 text-white"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2 }}
+          >
             {homeItems.hero.title}
-          </h1>
+          </motion.h1>
 
-          <p className="text-xl text-gray-500 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          <motion.p
+            className="text-xl text-white dark:text-gray-100 mb-8 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
             {homeItems.hero.subtitle}
-          </p>
-          <div className="flex justify-center gap-4">
+          </motion.p>
+          <motion.div
+            className="flex justify-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
             <Button asChild size="lg">
               <Link href="/contact">{homeItems.buttons.getStarted}</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
               <Link href="/services">{homeItems.buttons.ourServices}</Link>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
 

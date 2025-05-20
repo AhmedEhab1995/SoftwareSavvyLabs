@@ -20,8 +20,8 @@ export default function Home() {
   const homeItems = translations[language]?.home;
 
   const stats = [
-    { label: homeItems.stats.transactions, value: "10,000+", icon: Building2 },
-    { label: homeItems.stats.clients, value: "50+", icon: Users },
+    { label: homeItems.stats.transactions, value: "10+", icon: Building2 },
+    { label: homeItems.stats.clients, value: "17+", icon: Users },
     { label: homeItems.stats.partners, value: "10+", icon: Target },
   ];
 
@@ -75,7 +75,7 @@ export default function Home() {
             {homeItems.hero.title}
           </h1>
 
-          <p className="text-xl text-gray-500 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white dark:text-gray-100 mb-8 max-w-2xl mx-auto">
             {homeItems.hero.subtitle}
           </p>
           <div className="flex justify-center gap-4">

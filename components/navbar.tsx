@@ -57,7 +57,7 @@ const Navbar = () => {
                 <Link
                   key={key}
                   href={`/${key.toLowerCase()}`}
-                  className={`hover:text-black transition-colors px-3 py-2 rounded-md ${
+                  className={`hover:text-yellow-500 transition-colors px-3 py-2 rounded-md ${
                     active === key ? "bg-primary text-primary-foreground" : ""
                   }`}
                   onClick={() => setActive(key)} // Set active on click

@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
               <Code2 className="h-8 w-8" />
-              <span className="font-bold text-xl">SAVVY Labs</span>
+              <span className="font-bold text-xl">SOFTWARE SAVVY LABS</span>
             </Link>
             <p className="text-muted-foreground">
               Leading software development and digital services company,
