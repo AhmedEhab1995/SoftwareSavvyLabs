@@ -21,8 +21,8 @@ const team = [
     ],
   },
   {
-    id: "osama-bahaa",
-    name: "Osama Bahaa",
+    id: "ahmed-diab",
+    name: "Ahmed Diab",
     role: "Chief Technology Officer (CTO)",
     image: "/images/osama-bahaa.png",
     bio: "Tech visionary specializing in system architecture and cybersecurity",
