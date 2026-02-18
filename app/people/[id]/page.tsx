@@ -24,7 +24,7 @@ const team = [
   id: "mohey-badr",
   name: "Mohey ElDin Badr",
   role: "Chief Technology Officer (CTO)",
-  image: "/images/mohey-badr.png",
+  image: "/images/mohey-badr.jpeg",
   bio: "Technology leader specializing in scalable architectures, AI-driven systems, and secure cloud platforms",
   education: [
     "BSc in Electronics & Communication Engineering – MIU",
