@@ -21,22 +21,22 @@ const team = [
     ],
   },
   {
-    id: "ahmed-diab",
-    name: "Ahmed Diab",
-    role: "Chief Technology Officer (CTO)",
-    image: "/images/osama-bahaa.png",
-    bio: "Tech visionary specializing in system architecture and cybersecurity",
-    education: [
-      "MS in Information Security – Germany",
-      "BS in Computer Engineering",
-    ],
-    expertise: ["System Design", "Cybersecurity", "Cloud Infrastructure"],
-    achievements: [
-      "Architected core systems for national subsidy platform",
-      "Integrated cross-platform fintech solutions",
-      "Deployed secure cloud environments",
-    ],
-  },
+  id: "mohey-badr",
+  name: "Mohey ElDin Badr",
+  role: "Chief Technology Officer (CTO)",
+  image: "/images/mohey-badr.png",
+  bio: "Technology leader specializing in scalable architectures, AI-driven systems, and secure cloud platforms",
+  education: [
+    "BSc in Electronics & Communication Engineering – MIU",
+    "Continuous specialization in AI, Cloud & Distributed Systems",
+  ],
+  expertise: ["Microservices Architecture", "Generative AI & RAG", "Cloud & DevOps"],
+  achievements: [
+    "Led design of scalable, cloud-native platforms using Kubernetes",
+    "Implemented AI-powered solutions leveraging RAG and LLMs",
+    "Built secure, enterprise-grade authentication and system integrations",
+  ],
+},
   {
     id: "ayman-helal",
     name: "Ayman Helal",
