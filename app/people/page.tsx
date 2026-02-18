@@ -12,12 +12,12 @@ const team = [
     bio: "Software engineer with deep expertise in machine learning and AI",
   },
   {
-    id: "ahmed-diab",
-    name: "Ahmed Diab",
-    role: "Chief Technology Officer (CTO)",
-    image: "/images/osama-bahaa.png",
-    bio: "Tech visionary specializing in system architecture and cybersecurity",
-  },
+  id: "mohey-badr",
+  name: "Mohey ElDin Badr",
+  role: "Chief Technology Officer (CTO)",
+  image: "/images/mohey-badr.jpeg",
+  bio: "Technology leader specializing in scalable architectures, AI-driven systems, and secure cloud platforms",
+},
   {
     id: "ayman-helal",
     name: "Ayman Helal",
