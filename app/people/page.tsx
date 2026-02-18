@@ -16,7 +16,7 @@ const team = [
   name: "Mohey ElDin Badr",
   role: "Chief Technology Officer (CTO)",
   image: "/images/mohey-badr.jpeg",
-  bio: "Technology leader specializing in scalable architectures, AI-driven systems, and secure cloud platforms",
+  bio: "Technology leader specializing in scalable systems, AI, and cloud",
 },
   {
     id: "ayman-helal",
